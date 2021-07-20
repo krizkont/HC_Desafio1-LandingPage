@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackFriday-Fones</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="logo">
+      <a href="https://loja.imaginarium.com.br/">
+        <img src="./assets/logo.png" alt="Logo Dev Finance" />
+      </a>
+    </header>
+
+    <main class="container">
+      <section id="hero">
+        <div class="image">
+          <img src="./assets/bannerColorFriday.png" />
+        </div>
+        <div class="text">
+          <p>
+            Integer mi sem, volutpat quis facilisis sit amet, luctus at lectus.
+            Fusce id consequat ligula, nec molestie odio. Maecenas euismod
+            tempor massa, vitae commodo enim pulvinar at.
+          </p>
+        </div>
+      </section>
+
+      <section id="cardSection">
+        <div class="card">
+          <img src="./assets/img1.jpg" alt="" />
+          <h3>
+            <span>❤Headline 1 </span>
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            consequat dui nisl, quis porttitor dolor dictum eget. Morbi tempor
+            purus risus.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="./assets/img2.jpg" alt="" />
+
+          <h3>
+            <span>🤩Headline 2</span>
+          </h3>
+          <p>
+            Curabitur at sapien nunc. Aliquam sit amet pulvinar nisi. Cras eros
+            nunc, vulputate eleifend urna ac, iaculis pharetra mi.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="./assets/img3.jpg" alt="" />
+
+          <h3>
+            <span>🎒Headline 3</span>
+          </h3>
+          <p>
+            Integer mi sem, volutpat quis facilisis sit amet, luctus at lectus.
+            Fusce id consequat ligula, nec molestie odio.
+          </p>
+        </div>
+
+
+      </section>
+      <div class="form">
+        <div id="formbox">
+          <h2>Cadastrar</h2>
+
+          <form role="form" onsubmit="signUp(event)">
+          <div class="input-group">
+            <label for="name"> Nome </label>
+
+            <input type="text" id="name" sname="name" placeholder="João Silva" />
+          </div>
+
+          <div class="input-group">
+            <label for="email"> Email </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="joaos1lva@email.com"
+            />
+              <button type="submit" >Quero fazer parte🥳</button>
+          </div>
+          <p>Curabitur at sapien nunc.</p>
+        </div>
+      </form>
+      </div>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <img
+            src="https://i.pinimg.com/originals/e5/56/ae/e556ae686a3e517d465a41cfe90267b4.gif"
+          />
+          <p>
+            Agora é só esperar os produtos mais descolados da internet chegarem
+            no seu e-mail 😎
+          </p>
+          <div class="input-group actions">
+            <a href="https://loja.imaginarium.com.br/" class="button cancel"
+              >Mais Ofertas</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Hiring Coders</p>
+    </footer>
+
+    
+    <script>
+      const Modal = {
+        open() {
+          document.querySelector('.modal-overlay').classList.add('active')
+        },
+        close() {
+          document.querySelector('.modal-overlay').classList.remove('active')
+        }
+      }
+
+      </script>
+      
+        <script type="text/javascript">
+      const signUp = e =>{
+        let formData = {
+          name:document.getElementById('name').value,
+          email:document.getElementById('email').value,
+        }
+        localStorage.setItem('formData',JSON.stringify(formData));
+        console.log(localStorage.getItem('formData'))
+        e.preventDefault();
+        Modal.open();
+      
+          }
+      </script>
+
+  </body>
+</html>
